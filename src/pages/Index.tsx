@@ -6,79 +6,87 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-pink-50">
+    <div className="min-h-screen w-full bg-gradient-to-b from-pink-50 to-pink-100">
       {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-32 pb-20">
-        <div className="text-center space-y-6">
-          <span className="px-4 py-2 bg-pink-100 rounded-full text-sm inline-block">
-            AI-Powered Beauty Advice
-          </span>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">
-            Your Personal Beauty Expert
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Get personalized skincare and makeup recommendations powered by advanced AI technology.
-          </p>
-          <button 
-            onClick={() => navigate('/demo')}
-            className="mt-8 px-8 py-4 bg-pink-500 text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
-          >
-            Try AI Advisor Now
-          </button>
-        </div>
-      </section>
+      <div className="w-full">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
+          <div className="text-center space-y-6">
+            <span className="px-4 py-2 bg-pink-200 rounded-full text-sm inline-block">
+              AI-Powered Beauty Advice
+            </span>
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">
+              Your Personal Beauty Expert
+            </h1>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Get personalized skincare and makeup recommendations powered by advanced AI technology.
+            </p>
+            <button 
+              onClick={() => navigate('/demo')}
+              className="mt-8 px-8 py-4 bg-pink-500 text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
+            >
+              Try AI Advisor Now
+            </button>
+          </div>
+        </section>
+      </div>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-20">
-        <h2 className="text-3xl font-bold text-center mb-16">Key Features</h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <button
-              key={feature.title}
-              onClick={() => navigate('/demo')}
-              className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 text-left"
-            >
-              <feature.icon className="w-10 h-10 text-pink-500 mb-4" />
-              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-              <p className="text-gray-600">{feature.description}</p>
-            </button>
-          ))}
-        </div>
-      </section>
+      <div className="w-full">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-center mb-16">Key Features</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature) => (
+              <button
+                key={feature.title}
+                onClick={() => navigate('/demo')}
+                className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 text-left"
+              >
+                <feature.icon className="w-10 h-10 text-pink-500 mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </button>
+            ))}
+          </div>
+        </section>
+      </div>
 
       {/* How It Works Section */}
-      <section className="container mx-auto px-4 py-20 bg-pink-50">
-        <h2 className="text-3xl font-bold text-center mb-16">How It Works</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          {steps.map((step, index) => (
-            <div key={step.title} className="text-center">
-              <div className="w-16 h-16 rounded-full bg-pink-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
-                {index + 1}
+      <div className="w-full bg-pink-50/50">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <h2 className="text-3xl font-bold text-center mb-16">How It Works</h2>
+          <div className="grid md:grid-cols-3 gap-8">
+            {steps.map((step, index) => (
+              <div key={step.title} className="text-center">
+                <div className="w-16 h-16 rounded-full bg-pink-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+                  {index + 1}
+                </div>
+                <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
+                <p className="text-gray-600">{step.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
-              <p className="text-gray-600">{step.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      </div>
 
       {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            Ready to Transform Your Beauty Routine?
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Join thousands of satisfied users who have discovered their perfect beauty routine with our AI advisor.
-          </p>
-          <button 
-            onClick={() => navigate('/account')}
-            className="px-8 py-4 bg-pink-500 text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
-          >
-            Get Started Free
-          </button>
-        </div>
-      </section>
+      <div className="w-full">
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">
+              Ready to Transform Your Beauty Routine?
+            </h2>
+            <p className="text-xl text-gray-600 mb-8">
+              Join thousands of satisfied users who have discovered their perfect beauty routine with our AI advisor.
+            </p>
+            <button 
+              onClick={() => navigate('/account')}
+              className="px-8 py-4 bg-pink-500 text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
+            >
+              Get Started Free
+            </button>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
