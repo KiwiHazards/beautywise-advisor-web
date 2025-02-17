@@ -1,9 +1,8 @@
+
 import { Sparkles, Star, Heart, Zap } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Index = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-beauty-warm">
       {/* Hero Section */}
@@ -18,10 +17,7 @@ const Index = () => {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Get personalized skincare and makeup recommendations powered by advanced AI technology.
           </p>
-          <button 
-            onClick={() => navigate('/account')}
-            className="mt-8 px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
-          >
+          <button className="mt-8 px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg">
             Try AI Advisor Now
           </button>
         </div>
@@ -70,10 +66,7 @@ const Index = () => {
           <p className="text-xl text-gray-600 mb-8">
             Join thousands of satisfied users who have discovered their perfect beauty routine with our AI advisor.
           </p>
-          <button 
-            onClick={() => navigate('/account')}
-            className="px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
-          >
+          <button className="px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg">
             Get Started Free
           </button>
         </div>
