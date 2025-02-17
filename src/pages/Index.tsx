@@ -1,8 +1,10 @@
 
 import { Sparkles, Star, Heart, Zap } from "lucide-react";
-import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-beauty-warm">
       {/* Hero Section */}
@@ -17,7 +19,10 @@ const Index = () => {
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Get personalized skincare and makeup recommendations powered by advanced AI technology.
           </p>
-          <button className="mt-8 px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg">
+          <button 
+            onClick={() => navigate('/demo')}
+            className="mt-8 px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
+          >
             Try AI Advisor Now
           </button>
         </div>
@@ -28,15 +33,16 @@ const Index = () => {
         <h2 className="text-3xl font-bold text-center mb-16">Key Features</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div
+            <button
               key={feature.title}
-              className="p-6 rounded-2xl bg-white bg-opacity-50 backdrop-blur-sm border border-white border-opacity-20 hover:shadow-xl transition duration-300 animate-fade-up"
+              onClick={() => navigate('/demo')}
+              className="p-6 rounded-2xl bg-white bg-opacity-50 backdrop-blur-sm border border-white border-opacity-20 hover:shadow-xl transition duration-300 animate-fade-up text-left"
               style={{ animationDelay: `${index * 100}ms` }}
             >
               <feature.icon className="w-10 h-10 text-beauty-pink mb-4" />
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
-            </div>
+            </button>
           ))}
         </div>
       </section>
@@ -66,7 +72,10 @@ const Index = () => {
           <p className="text-xl text-gray-600 mb-8">
             Join thousands of satisfied users who have discovered their perfect beauty routine with our AI advisor.
           </p>
-          <button className="px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg">
+          <button 
+            onClick={() => navigate('/account')}
+            className="px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
+          >
             Get Started Free
           </button>
         </div>
