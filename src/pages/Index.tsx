@@ -6,11 +6,11 @@ const Index = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-beauty-warm">
+    <div className="min-h-screen bg-gradient-to-b from-white to-pink-50">
       {/* Hero Section */}
-      <section className="container px-4 pt-32 pb-20">
-        <div className="text-center space-y-6 animate-fade-in">
-          <span className="px-4 py-2 bg-beauty-rose bg-opacity-30 rounded-full text-sm inline-block">
+      <section className="container mx-auto px-4 pt-32 pb-20">
+        <div className="text-center space-y-6">
+          <span className="px-4 py-2 bg-pink-100 rounded-full text-sm inline-block">
             AI-Powered Beauty Advice
           </span>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 tracking-tight">
@@ -21,7 +21,7 @@ const Index = () => {
           </p>
           <button 
             onClick={() => navigate('/demo')}
-            className="mt-8 px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
+            className="mt-8 px-8 py-4 bg-pink-500 text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
           >
             Try AI Advisor Now
           </button>
@@ -29,17 +29,16 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="container px-4 py-20">
+      <section className="container mx-auto px-4 py-20">
         <h2 className="text-3xl font-bold text-center mb-16">Key Features</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
             <button
               key={feature.title}
               onClick={() => navigate('/demo')}
-              className="p-6 rounded-2xl bg-white bg-opacity-50 backdrop-blur-sm border border-white border-opacity-20 hover:shadow-xl transition duration-300 animate-fade-up text-left"
-              style={{ animationDelay: `${index * 100}ms` }}
+              className="p-6 rounded-2xl bg-white shadow-sm hover:shadow-xl transition duration-300 text-left"
             >
-              <feature.icon className="w-10 h-10 text-beauty-pink mb-4" />
+              <feature.icon className="w-10 h-10 text-pink-500 mb-4" />
               <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>
             </button>
@@ -48,12 +47,12 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="container px-4 py-20 bg-beauty-rose bg-opacity-10">
+      <section className="container mx-auto px-4 py-20 bg-pink-50">
         <h2 className="text-3xl font-bold text-center mb-16">How It Works</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={step.title} className="text-center">
-              <div className="w-16 h-16 rounded-full bg-beauty-pink text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
+              <div className="w-16 h-16 rounded-full bg-pink-500 text-white flex items-center justify-center text-2xl font-bold mx-auto mb-6">
                 {index + 1}
               </div>
               <h3 className="text-xl font-semibold mb-4">{step.title}</h3>
@@ -64,7 +63,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="container px-4 py-20">
+      <section className="container mx-auto px-4 py-20">
         <div className="text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             Ready to Transform Your Beauty Routine?
@@ -74,7 +73,7 @@ const Index = () => {
           </p>
           <button 
             onClick={() => navigate('/account')}
-            className="px-8 py-4 bg-beauty-pink text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
+            className="px-8 py-4 bg-pink-500 text-white rounded-full font-medium transform transition hover:scale-105 hover:shadow-lg"
           >
             Get Started Free
           </button>
